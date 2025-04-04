@@ -2,14 +2,35 @@
   "name": "RNCourseFeng37Desktop",
   "version": "1.1.4",
   "description": "RNCourseFeng37Desktop",
-  "main": "main.js", 
+  "main": "main.js",
   "scripts": {
-    "start": "electron .", 
+    "start": "electron .",
     "pack": "electron-builder",
     "dist": "electron-builder --publish never"
   },
   "devDependencies": {
     "electron": "^35.1.3",
     "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.rncoursefeng37desktop",
+    "productName": "RNCourseFeng37Desktop",
+    "files": [
+      "**/*"
+    ],
+    "asar": true,
+    "compression": "maximum",
+    "mac": {
+      "target": ["zip"],
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": ["zip"],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": ["zip"],
+      "icon": "build/icon.png"
+    }
   }
 }
